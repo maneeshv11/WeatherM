@@ -12,5 +12,14 @@ public class PropertiesConfig {
     @Value("${darksky.api}")
     public String darkSkyApiUrl;
 
+    @Value("${redis.host}")
+    public String redisHost;
+
+    @Value("${redis.port}")
+    public int redisPort;
+
+    public String REDIS_WEATHER_DTO_KEY = "W|";
+
+    public int EXPIRY_TIME = 86400;
 
 }
