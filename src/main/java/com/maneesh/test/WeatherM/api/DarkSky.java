@@ -1,21 +1,17 @@
 package com.maneesh.test.WeatherM.api;
 
 import com.maneesh.test.WeatherM.constant.PropertiesConfig;
+import com.maneesh.test.WeatherM.dao.redis.RedisManager;
 import com.maneesh.test.WeatherM.pojo.dto.WeatherDTO;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import javax.net.ssl.HttpsURLConnection;
-import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 
 
@@ -25,6 +21,8 @@ public class DarkSky {
 
     private static Logger logger = LoggerFactory.getLogger(DarkSky.class);
 
+    @Autowired
+    private RedisManager redisManager;
 
     @Autowired
     private PropertiesConfig propertiesConfig;
@@ -54,6 +52,12 @@ public class DarkSky {
 
 
     public WeatherDTO getCurrentWeather(double latitude, double longitude) throws Exception {
-        return getWeatherForecastJsonResponses(String.valueOf(latitude), String.valueOf(longitude));
+        WeatherDTO weatherDTO = redisManager.getWeatherDTO(String.valueOf(latitude), String.valueOf(longitude));
+
+        if (weatherDTO == null){
+            weatherDTO = getWeatherForecastJsonResponses(String.valueOf(latitude), String.valueOf(longitude));
+            redisManager.cacheWeatherDTO(weatherDTO);
+        }
+        return weatherDTO;
     }
 }
