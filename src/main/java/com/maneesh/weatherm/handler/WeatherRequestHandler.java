@@ -13,10 +13,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class WeatherRequestHandler {
 
-    Logger logger = LoggerFactory.getLogger(WeatherRequestHandler.class);
+    private Logger logger = LoggerFactory.getLogger(WeatherRequestHandler.class);
 
     @Autowired
-    DarkSky darkSky;
+    private DarkSky darkSky;
 
     public WeatherResponse handelWeatherRequest(WeatherRequest weatherRequest) throws InternalServerError {
         try {

@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController()
 public class WeatherForecastController {
 
-    Logger logger = LoggerFactory.getLogger(WeatherForecastController.class);
+    private Logger logger = LoggerFactory.getLogger(WeatherForecastController.class);
 
     @Autowired
     private WeatherRequestHandler weatherRequestHandler;
