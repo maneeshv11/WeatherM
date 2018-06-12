@@ -1,8 +1,8 @@
-package com.maneesh.test.WeatherM.dao.redis;
+package com.maneesh.weatherm.dao.redis;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.maneesh.test.WeatherM.constant.PropertiesConfig;
-import com.maneesh.test.WeatherM.pojo.dto.WeatherDTO;
+import com.maneesh.weatherm.constant.PropertiesConfig;
+import com.maneesh.weatherm.pojo.dto.WeatherDTO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

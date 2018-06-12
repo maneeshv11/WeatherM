@@ -1,10 +1,10 @@
-package com.maneesh.test.WeatherM.handler;
+package com.maneesh.weatherm.handler;
 
-import com.maneesh.test.WeatherM.api.DarkSky;
-import com.maneesh.test.WeatherM.exception.InternalServerError;
-import com.maneesh.test.WeatherM.pojo.dto.WeatherDTO;
-import com.maneesh.test.WeatherM.pojo.request.WeatherRequest;
-import com.maneesh.test.WeatherM.pojo.response.WeatherResponse;
+import com.maneesh.weatherm.api.DarkSky;
+import com.maneesh.weatherm.exception.InternalServerError;
+import com.maneesh.weatherm.pojo.dto.WeatherDTO;
+import com.maneesh.weatherm.pojo.request.WeatherRequest;
+import com.maneesh.weatherm.pojo.response.WeatherResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

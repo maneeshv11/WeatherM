@@ -1,9 +1,9 @@
-package com.maneesh.test.WeatherM.controller;
+package com.maneesh.weatherm.controller;
 
-import com.maneesh.test.WeatherM.exception.InternalServerError;
-import com.maneesh.test.WeatherM.handler.WeatherRequestHandler;
-import com.maneesh.test.WeatherM.pojo.request.WeatherRequest;
-import com.maneesh.test.WeatherM.pojo.response.WeatherResponse;
+import com.maneesh.weatherm.exception.InternalServerError;
+import com.maneesh.weatherm.handler.WeatherRequestHandler;
+import com.maneesh.weatherm.pojo.request.WeatherRequest;
+import com.maneesh.weatherm.pojo.response.WeatherResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +23,8 @@ public class WeatherForecastController {
 
     @PostMapping
     @RequestMapping("/weather")
-    public @ResponseBody WeatherResponse getWeatherForecastResponse(@RequestBody WeatherRequest weatherRequest){
+    public @ResponseBody
+    WeatherResponse getWeatherForecastResponse(@RequestBody WeatherRequest weatherRequest){
         logger.info("Request recieved : {}", weatherRequest.toString());
         try {
             WeatherResponse weatherResponse = weatherRequestHandler.handelWeatherRequest(weatherRequest);

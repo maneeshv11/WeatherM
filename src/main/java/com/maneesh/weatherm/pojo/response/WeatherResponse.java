@@ -1,10 +1,10 @@
-package com.maneesh.test.WeatherM.pojo.response;
+package com.maneesh.weatherm.pojo.response;
 
 public class WeatherResponse {
-    double latitude;
-    double longitude;
-    double temperatre;
-    long currentTime;
+    private double latitude;
+    private double longitude;
+    private double temperatre;
+    private long currentTime;
 
     public double getLatitude() {
         return latitude;
