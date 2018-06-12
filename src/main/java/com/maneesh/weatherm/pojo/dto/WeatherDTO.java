@@ -1,4 +1,4 @@
-package com.maneesh.test.WeatherM.pojo.dto;
+package com.maneesh.weatherm.pojo.dto;
 
 import org.json.simple.JSONObject;
 

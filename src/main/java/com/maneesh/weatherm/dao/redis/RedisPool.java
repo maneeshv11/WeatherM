@@ -1,6 +1,6 @@
-package com.maneesh.test.WeatherM.dao.redis;
+package com.maneesh.weatherm.dao.redis;
 
-import com.maneesh.test.WeatherM.constant.PropertiesConfig;
+import com.maneesh.weatherm.constant.PropertiesConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import redis.clients.jedis.Jedis;

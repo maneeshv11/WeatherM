@@ -1,8 +1,8 @@
-package com.maneesh.test.WeatherM.pojo.request;
+package com.maneesh.weatherm.pojo.request;
 
 public class WeatherRequest {
-    double latitude;
-    double longitude;
+    private double latitude;
+    private double longitude;
 
     public double getLatitude() {
         return latitude;

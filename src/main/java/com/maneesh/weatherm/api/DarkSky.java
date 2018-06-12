@@ -1,8 +1,8 @@
-package com.maneesh.test.WeatherM.api;
+package com.maneesh.weatherm.api;
 
-import com.maneesh.test.WeatherM.constant.PropertiesConfig;
-import com.maneesh.test.WeatherM.dao.redis.RedisManager;
-import com.maneesh.test.WeatherM.pojo.dto.WeatherDTO;
+import com.maneesh.weatherm.constant.PropertiesConfig;
+import com.maneesh.weatherm.dao.redis.RedisManager;
+import com.maneesh.weatherm.pojo.dto.WeatherDTO;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.slf4j.Logger;

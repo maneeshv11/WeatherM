@@ -1,4 +1,4 @@
-package com.maneesh.test.WeatherM.constant;
+package com.maneesh.weatherm.constant;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;

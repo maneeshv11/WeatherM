@@ -1,4 +1,4 @@
-package com.maneesh.test.WeatherM.exception;
+package com.maneesh.weatherm.exception;
 
 public class InternalServerError extends Exception{
 
